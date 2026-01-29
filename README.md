@@ -1,66 +1,85 @@
-# Tower Defense: The Last Stand
+# 🏰 Tower Defense
 
-**Course:** CSE 212 - Software Development Methodologies  
-**Semester:** Spring 2026  
-**Developer:** Gülce Çelik  
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Swing](https://img.shields.io/badge/Swing-GUI-blue?style=for-the-badge)
+![Course](https://img.shields.io/badge/CSE%20212-Software%20Development-purple?style=for-the-badge)
+![Semester](https://img.shields.io/badge/Semester-Fall%202025-orange?style=for-the-badge)
+
+> **Final Project for CSE 212 - Software Development Methodologies**
 
 ---
 
-## Project Overview
+## 📖 Project Overview
 
-"Tower Defense: The Last Stand" is a strategy-based graphical application developed as a final project for CSE 212. The primary objective of this project is to demonstrate the practical application of core software engineering principles, including Object-Oriented Programming (OOP), concurrency control, and event-driven architecture within the Java ecosystem.
+**Tower Defense** is a 2D strategy game developed as a term project. The goal was to build a complete graphical application using **Java** and **Swing**, focusing on applying software engineering principles learned in class.
 
-The application is built entirely using the standard Java Development Kit (JDK) and Swing library, ensuring cross-platform compatibility without reliance on external game engines.
+This project demonstrates core concepts such as **Object-Oriented Design**, **Multithreading** for the game loop, and **File Input/Output** for saving user data.
 
-## Technical Architecture
+---
 
-This project strictly adheres to the methodologies discussed in the course curriculum:
+## 🎮 Game Features
 
-*   **Object-Oriented Design**:
-    *   **Inheritance Hierarchy**: An abstract `Entity` class provides the foundation for all game objects (`Tower`, `Enemy`, `Projectile`), promoting code reuse and polymorphism.
-    *   **Encapsulation**: Game states (e.g., resources, wave progression) are encapsulated within the `GamePanel` class, protecting data integrity.
-*   **Multithreading & Concurrency**:
-    *   The game loop operates on a dedicated `Thread`, distinct from the Swing Event Dispatch Thread (EDT). This separation ensures that logic updates do not block the user interface rendering.
-    *   `SwingUtilities.invokeLater` is utilized to safely update UI components from the game thread.
-*   **Design Patterns**:
-    *   **Observer Pattern**: Implemented via Swing listeners for handling user input events.
-    *   **Factory Method**: Used implicitly in the creation of different enemy and tower types.
+### ⚔️ Towers
+Strategically place towers to stop the enemy waves.
 
-## Gameplay Specifications
+| Icon | Tower | Cost | Type | Description |
+| :---: | :--- | :--- | :--- | :--- |
+| <img src="https://img.icons8.com/color/48/turret.png" width="30"/> | **Fast Tower** | `$100` | ⚡ Rapid Fire | Fires quickly with low damage. Good for early waves. |
+| <img src="https://img.icons8.com/isometric/48/artillery.png" width="30"/> | **Strong Tower** | `$400` | 🐢 Heavy Hitter | Slow but deals high damage. Effective against armor. |
+| <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/48/missile.png" width="30"/> | **Double Rocket**| `$800` | 🚀 Twin Missiles | Fires two missiles at once for better area control. |
+| <img src="https://img.icons8.com/dusk/48/explosion.png" width="30"/> | **Big Rocket** | `$1200`| 💥 Area Damage | Creates large explosions to damage groups of enemies. |
 
-The game challenges users to defend a base from waves of autonomous enemies using a variety of defensive structures.
+### 👾 Enemies
+Different enemies require different strategies.
 
-### Defensive Units (Towers)
+*   🟢 **Green Runner**: Very fast but weak health.
+*   🛡️ **White Soldier**: Balanced speed and durability.
+*   🟠 **Orange Elite**: Heavily armored unit.
+*   ✈️ **Air Unit**: Flies over the map path! Requires careful tower placement.
+*   ☠️ **Boss Tank**: High health unit that appears in later waves.
 
-| Tower Type | Cost | Characteristics |
-| :--- | :--- | :--- |
-| **Fast Tower** | $100 | High rate of fire, low damage per hit. Effective against unarmored targets. |
-| **Strong Tower** | $400 | Low rate of fire, high impact damage. Capable of neutralizing armored units. |
-| **Double Rocket** | $800 | Simultaneous dual-projectile launch system. Provides area denial capability. |
-| **Big Rocket** | $1200 | Large area-of-effect (AOE) explosive damage. High strategic value against grouped enemies. |
+### ✨ Key Mechanics
+*   **Maps & Levels**: Choose from 3 different levels (Grass, Desert, Lava) with unique paths.
+*   **Save System**: High scores are saved to `game_results.csv`.
+*   **User Login**: Simple login system to track player progress.
+*   **Economy**: Earn money by defeating enemies to buy upgrades.
+*   **Sell Feature**: Misplaced a tower? Sell it to recover some resources.
+*   **Visuals**: Includes smoke effects for aircraft and floating text for earnings/damage.
 
-### Enemy Units
+---
 
-*   **Green Class**: High mobility, low durability structure.
-*   **White Class**: Standard infantry unit with balanced attributes.
-*   **Orange Class**: Heavy infantry with increased hit points and armor.
-*   **Air Units**: Airborne enemies that bypass terrain obstacles, requiring specific targeting priority.
-*   **Tank Class (Boss)**: High-durability unit serving as a "boss" encounter, requiring sustained damage output to defeat.
+## 🕹️ How to Play
 
-## Installation and Execution
+1.  **Start**: Run the application and enter a username.
+2.  **Select Level**: Choose a map difficulty.
+3.  **Defend**: Click a tower from the top menu and place it on the map.
+4.  **Survive**: Defend your health (starts at 100) against all waves.
+5.  **Game Over**: If health reaches 0, the game ends. Try to beat your high score!
 
-### Prerequisites
-*   Java Runtime Environment (JRE) 8 or higher.
-*   IDE (Eclipse, IntelliJ) or Command Line Interface.
+---
 
-### Running from Source (Eclipse)
-1.  Import the project via **File > Open Projects from File System**.
-2.  Navigate to the `src/tdgame` package.
-3.  Execute `Main.java` as a Java Application.
+## 🛠️ Technical Details
 
-### Running from Command Line
-Compile and execute the application using the following commands from the project root directory:
+*   **Language**: Java (JDK 8+)
+*   **GUI Library**: Swing (JPanel, JFrame, Graphics2D)
+*   **Architecture**:
+    *   **Game Loop**: Runs on a separate thread to keep the UI responsive.
+    *   **Inheritance**: Uses an abstract `Entity` class for all game objects.
+    *   **Pathfinding**: Coordinate-based movement system.
 
+---
+
+## 🚀 How to Run
+
+### Via Eclipse IDE
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/gulce-celik/CS212-TermProject-TowerDefense.git
+    ```
+2.  Import as a Java Project.
+3.  Run `src/tdgame/Main.java`.
+
+### Via Command Line
 ```bash
 javac -d bin -sourcepath src src/tdgame/Main.java
 java -cp bin tdgame.Main
@@ -68,6 +87,8 @@ java -cp bin tdgame.Main
 
 ---
 
-**Contact Information**  
-Gülce Çelik  
-[GitHub Profile](https://github.com/gulce-celik)
+<div align="center">
+  <p><b>Developed by Gülce Çelik</b></p>
+  <p><i>Computer Engineering Student</i></p>
+  <p>Fall 2025</p>
+</div>
