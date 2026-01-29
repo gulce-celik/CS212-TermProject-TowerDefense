@@ -86,7 +86,7 @@ Different enemies require different strategies.
 ### Via Eclipse IDE
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/gulce-celik/CS212-TermProject-TowerDefense.git
+    git clone https://github.com/gulce-celik/Tower-Defense-Game.git
     ```
 2.  Import as a Java Project.
 3.  Run `src/tdgame/Main.java`.
