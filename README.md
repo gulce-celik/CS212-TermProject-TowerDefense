@@ -17,6 +17,17 @@ This project demonstrates core concepts such as **Object-Oriented Design**, **Mu
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="screenshots/Game%20Photo_1.png" width="45%" alt="Gameplay 1">
+  <img src="screenshots/Game%20Photo_2.png" width="45%" alt="Gameplay 2">
+  <br>
+  <img src="screenshots/Game%20Photo_3.png" width="80%" alt="Menu Screen">
+</div>
+
+---
+
 ## 🎮 Game Features
 
 ### ⚔️ Towers
@@ -24,16 +35,16 @@ Strategically place towers to stop the enemy waves.
 
 | Icon | Tower | Cost | Type | Description |
 | :---: | :--- | :--- | :--- | :--- |
-| <img src="https://img.icons8.com/color/48/turret.png" width="30"/> | **Fast Tower** | `$100` | ⚡ Rapid Fire | Fires quickly with low damage. Good for early waves. |
-| <img src="https://img.icons8.com/isometric/48/artillery.png" width="30"/> | **Strong Tower** | `$400` | 🐢 Heavy Hitter | Slow but deals high damage. Effective against armor. |
-| <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/48/missile.png" width="30"/> | **Double Rocket**| `$800` | 🚀 Twin Missiles | Fires two missiles at once for better area control. |
-| <img src="https://img.icons8.com/dusk/48/explosion.png" width="30"/> | **Big Rocket** | `$1200`| 💥 Area Damage | Creates large explosions to damage groups of enemies. |
+| ⚡ | **Fast Tower** | `$100` | Rapid Fire | Fires quickly with low damage. Good for early waves. |
+| 🛡️ | **Strong Tower** | `$400` | Heavy Hitter | Slow but deals high damage. Effective against armor. |
+| 🚀 | **Double Rocket**| `$800` | Twin Missiles | Fires two missiles at once for better area control. |
+| 💥 | **Big Rocket** | `$1200`| Area Damage | Creates large explosions to damage groups of enemies. |
 
 ### 👾 Enemies
 Different enemies require different strategies.
 
 *   🟢 **Green Runner**: Very fast but weak health.
-*   🛡️ **White Soldier**: Balanced speed and durability.
+*   ⚪ **White Soldier**: Balanced speed and durability.
 *   🟠 **Orange Elite**: Heavily armored unit.
 *   ✈️ **Air Unit**: Flies over the map path! Requires careful tower placement.
 *   ☠️ **Boss Tank**: High health unit that appears in later waves.
