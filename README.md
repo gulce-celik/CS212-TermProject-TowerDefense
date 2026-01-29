@@ -20,10 +20,10 @@ This project demonstrates core concepts such as **Object-Oriented Design**, **Mu
 ## 📸 Screenshots
 
 <div align="center">
+  <img src="screenshots/Game%20Photo_4.png" width="80%" alt="Main Menu">
+  <br>
   <img src="screenshots/Game%20Photo_1.png" width="45%" alt="Gameplay 1">
   <img src="screenshots/Game%20Photo_2.png" width="45%" alt="Gameplay 2">
-  <br>
-  <img src="screenshots/Game%20Photo_3.png" width="80%" alt="Menu Screen">
 </div>
 
 ---
